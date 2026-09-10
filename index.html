@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <!-- رابط خط Idiqlat من Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Idiqlat:wght@200;300;400&d @import urisplay=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skyline Air</title>
+
+  <!-- Favicon SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+
+  <!-- Fixed CSS link to point to index_3.css -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="Skyline Air home">
+      <span class="brand-icon">✈</span>
+      <span>SKYLINE <b>AIR</b></span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#flights">Flights</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#fleet">Our Fleet</a>
+      <a href="#status">Flight Status</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="support-btn" href="#contact">Support</a>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero" style="background: url('https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="eyebrow">CAIRO · CAI / TERMINAL 3</div>
+        <h1>Your next horizon<br><span>starts here.</span></h1>
+        <p>A clearer way to move through the world. Thoughtful journeys from Cairo, with the details that make flying feel easy.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#flights">Book your flight <span>→</span></a>
+          <a class="btn btn-secondary" href="#status">Track a flight</a>
+        </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="hero-stats">
+  <span class="stat-item">
+    <i class="fa-regular fa-circle-check stat-icon icon-blue"></i>
+    24/7 Cairo support
+  </span>
+  <span class="stat-item">
+    <i class="fa-solid fa-gauge-high stat-icon icon-orange"></i>
+    91.4% on-time departures
+  </span>
+  <span class="stat-item">
+    <i class="fa-solid fa-earth-americas stat-icon icon-blue"></i>
+    28 cities, one hub
+  </span>
+</div>
+
+        <!-- كارت البحث كامل مع قائمة الدول وزر الانتقال للرحلات -->
+<div class="search-card" style="background: #091f36; border: 1px solid #1a3a58; border-radius: 14px; padding: 20px; margin-top: 25px;">
+  
+  <div style="display: flex; gap: 10px; margin-bottom: 15px; align-items: center;">
+    <button type="button" style="background: #143556; color: #fff; border: none; padding: 6px 14px; border-radius: 6px; font-weight: 600;">Round trip</button>
+    <button type="button" style="background: transparent; color: #8da5b8; border: none; padding: 6px 14px;">One way</button>
+    <span style="margin-left: auto; color: #63829b; font-size: 12px;">📅 Flexible dates? Compare the best departure times.</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 15px;">
+    
+    <!-- FROM -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">FROM</label>
+      <select style="width: 100%; background: #051526; border: none; color: #fff; font-weight: 600; outline: none;">
+        <option>Cairo — CAI</option>
+      </select>
+    </div>
+
+    <!-- TO (قائمة الدول والمدن) -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">TO</label>
+      <select style="width: 100%; background: #051526; border: none; color: #fff; font-weight: 600; outline: none;">
+        <option value="BER">Berlin — Germany (BER)</option>
+        <option value="CDG">Paris — France (CDG)</option>
+        <option value="DXB">Dubai — UAE (DXB)</option>
+        <option value="LHR">London — UK (LHR)</option>
+        <option value="FRA">Frankfurt — Germany (FRA)</option>
+        <option value="IST">Istanbul — Turkey (IST)</option>
+        <option value="JED">Jeddah — Saudi Arabia (JED)</option>
+        <option value="FCO">Rome — Italy (FCO)</option>
+      </select>
+    </div>
+
+    <!-- DEPARTURE -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">DEPARTURE</label>
+      <input type="date" value="2026-06-18" style="width: 100%; background: transparent; border: none; color: #fff; font-weight: 600; outline: none;" />
+    </div>
+
+    <!-- RETURN -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">RETURN</label>
+      <input type="date" value="2026-06-25" style="width: 100%; background: transparent; border: none; color: #fff; font-weight: 600; outline: none;" />
+    </div>
+
+    <!-- PASSENGERS -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">PASSENGERS</label>
+      <select style="width: 100%; background: #051526; border: none; color: #fff; font-weight: 600; outline: none;">
+        <option>1 Adult</option>
+        <option>2 Adults</option>
+      </select>
+    </div>
+
+    <!-- CLASS -->
+    <div style="background: #051526; border: 1px solid #193854; border-radius: 8px; padding: 8px;">
+      <label style="display: block; font-size: 9px; color: #617d96; font-weight: 700;">CLASS</label>
+      <select style="width: 100%; background: #051526; border: none; color: #fff; font-weight: 600; outline: none;">
+        <option>Economy</option>
+        <option>Business</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- زر البحث المربوط بسكشن الرحلات -->
+  <a href="#flights" style="display: flex; align-items: center; justify-content: center; gap: 8px; background: #43c4ff; color: #03131e; padding: 14px; border-radius: 8px; font-weight: 700; text-decoration: none; width: 100%;">
+    <span>🔍</span>
+    <span>Search available flights</span>
+  </a>
+
+</div>
+      </div>
+    </section>
+
+    <!-- POPULAR FLIGHTS -->
+    <section id="flights" class="section flights-section">
+      <div class="section-heading">
+        <div><h2>Popular <span>routes</span></h2></div>
+        <p>Eight considered departures from our Cairo hub, built around your day.</p>
+      </div>
+      <div id="flightList" class="flight-list"></div>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="section">
+      <div class="eyebrow">FLY FROM CAIRO</div>
+      <div class="section-heading destinations-heading">
+        <h2>Where will you <span>go next?</span></h2>
+        <p>Choose a city and we'll set it as your next destination. Your trip begins with one good decision.</p>
+      </div>
+
+      <div class="destination-grid">
+        <article class="destination-card">
+          <img src="pexels-njeromin-17379619 (1).jpg" alt="Berlin" />
+          <div class="destination-info"><small>GERMANY</small><h3>Berlin</h3><p>For the curious · CAI → BER</p><strong>From EGP 18,450 <span>→</span></strong></div>
+        </article>
+        <article class="destination-card">
+          <img src="photo-1502602898657-3e91760cbb34.avif" alt="Paris" />
+          <div class="destination-info"><small>FRANCE</small><h3>Paris</h3><p>For the romantic · CAI → CDG</p><strong>From EGP 19,200 <span>→</span></strong></div>
+        </article>
+        <article class="destination-card">
+          <img src="4f.jpg" alt="Dubai" />
+          <div class="destination-info"><small>UNITED ARAB EMIRATES</small><h3>Dubai</h3><p>For the ambitious · CAI → DXB</p><strong>From EGP 12,800 <span>→</span></strong></div>
+        </article>
+        <article class="destination-card">
+          <img src="photo-1513635269975-59663e0ac1ad.avif" alt="London" />
+          <div class="destination-info"><small>UNITED KINGDOM</small><h3>London</h3><p>For the worldly · CAI → LHR</p><strong>From EGP 21,750 <span>→</span></strong></div>
+        </article>
+        <article class="destination-card">
+          <img src="Cairo City.jpg" alt="Cairo" />
+          <div class="destination-info"><small>EGYPT</small><h3>Cairo</h3><p>Start close to home · CAI → CAI</p><strong>From EGP 6,900 <span>→</span></strong></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FLEET -->
+    <section id="fleet" class="section fleet-section">
+      <div class="eyebrow">THE SKYLINE FLEET</div>
+      <div class="section-heading">
+        <h2>Made for the <span>miles.</span></h2>
+        <p>Six aircraft families built for long-haul comfort, regional flexibility and a smoother journey from Cairo.</p>
+      </div>
+
+      <div class="fleet-grid">
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Long-haul flagship</span><img src="photo-1667470928057-cc2b680d23f7.avif" alt="Airbus A350-900"></div>
+          <h3>Airbus A350-900</h3>
+          <p>A quiet long-haul flagship with wider windows, refined cabin lighting and a smooth ride across continents.</p>
+          <div class="fleet-meta"><b>325 seats<small>CAPACITY</small></b><b>15,000 km<small>RANGE</small></b></div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Long-haul comfort</span><img src="photo-1721849281898-33c5a967153a.avif" alt="Boeing 787-9 Dreamliner"></div>
+          <h3>Boeing 787-9 Dreamliner</h3>
+          <p>Designed for long journeys with softer cabin light, large windows and a comfortable, modern atmosphere.</p>
+          <div class="fleet-meta"><b>296 seats<small>CAPACITY</small></b><b>13,950 km<small>RANGE</small></b></div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Regional workhorse</span><img src="photo-1664728723144-90a97fb1464f.avif" alt="Airbus A320neo"></div>
+          <h3>Airbus A320neo</h3>
+          <p>Efficient and nimble, made for frequent regional flights with a quieter cabin and dependable turnaround.</p>
+          <div class="fleet-meta"><b>186 seats<small>CAPACITY</small></b><b>6,300 km<small>RANGE</small></b></div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Premium regional</span><img src="photo-1703283249533-d30ef021bc4e.avif" alt="Airbus A321"></div>
+          <h3>Airbus A321</h3>
+          <p>Extra reach for high-demand routes, balancing generous seating with the flexibility of a single-aisle aircraft.</p>
+          <div class="fleet-meta"><b>220 seats<small>CAPACITY</small></b><b>7,400 km<small>RANGE</small></b></div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Global flagship</span><img src="photo-1601544564660-98f64a967a9a.avif" alt="Boeing 777-300ER"></div>
+          <h3>Boeing 777-300ER</h3>
+          <p>A spacious wide-body workhorse for major international routes, built around capacity and long-range performance.</p>
+          <div class="fleet-meta"><b>396 seats<small>CAPACITY</small></b><b>13,650 km<small>RANGE</small></b></div>
+        </article>
+        <article class="fleet-card">
+          <div class="fleet-image"><span>Long-range classic</span><img src="photo-1740279913190-46ec2cde2607.avif" alt="Airbus A330-300"></div>
+          <h3>Airbus A330-300</h3>
+          <p>A proven wide-body aircraft offering a comfortable cabin and dependable performance on medium and long routes.</p>
+          <div class="fleet-meta"><b>277 seats<small>CAPACITY</small></b><b>11,750 km<small>RANGE</small></b></div>
+        </article>
+      </div>
+    </section>
+
+
+        <!-- FLIGHT STATUS -->
+    <section id="status" class="status-section">
+      <div class="section-grid">
+        <div>
+          <div class="eyebrow">FLIGHT INFORMATION</div>
+          <h2>Know before you go.</h2>
+          <p>Enter your Skyline Air flight number for the latest departure information from Cairo International Airport.</p>
+          <div class="mini-points"><span>⚡ Gate changes in real time</span><span>◷ Local airport time</span></div>
+        </div>
+        <div class="status-card">
+          <div class="label">CHECK FLIGHT STATUS</div>
+          <div class="status-form">
+            <input id="statusInput" placeholder="EXAMPLE: SKY204" />
+            <button id="statusBtn" class="btn btn-primary">Check</button>
+          </div>
+          <div id="statusResult" class="status-result"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CAIRO HUB -->
+    <section class="hub-section">
+      <div class="hub-container">
+        
+        <!-- Left Column: Info -->
+        <div class="hub-info">
+          <span class="hub-eyebrow">YOUR CAIRO HUB</span>
+          <h2 class="hub-title">Cairo International Airport.</h2>
+          
+          <div class="hub-terminal">
+            <span class="dash">—</span>
+            <span class="code">CAI</span>
+            <span class="dot">•</span>
+            <span>TERMINAL 3</span>
+          </div>
+          
+          <p class="hub-desc" >
+            Your Skyline journey starts at Terminal 3, our Cairo home base. Arrive early, follow the blue Skyline signs and let the rhythm of the airport do the rest.
+          </p>
+
+          <div class="hub-facts">
+            <div class="fact-item">
+              <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Check-in opens 3h before departure</span>
+            </div>
+            <div class="fact-item">
+              <svg class="fact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              <span>23 kg checked baggage</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Service Cards Grid -->
+        <div class="hub-grid">
+          <button class="service-card" data-service="Departures">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.5-.1-1 .1-1.3.5l-.8.9c-.3.4-.2 1 .2 1.3l4.6 3.6-2.9 2.9-2.3-.6c-.3-.1-.7 0-.9.3l-.4.5c-.2.3-.2.8.1 1.1l2.6 2.6c.3.3.8.3 1.1.1l.5-.4c.3-.2.4-.6.3-.9l-.6-2.3 2.9-2.9 3.6 4.6c.3.4.9.5 1.3.2l.9-.8c.4-.3.6-.8.5-1.3z"/></svg>
+                <h3>Departures</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>Live check-in desks, gate windows and boarding guidance.</p>
+            </div>
+          </button>
+
+          <button class="service-card" data-service="Arrivals">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.5-.1-1 .1-1.3.5l-.8.9c-.3.4-.2 1 .2 1.3l4.6 3.6-2.9 2.9-2.3-.6c-.3-.1-.7 0-.9.3l-.4.5c-.2.3-.2.8.1 1.1l2.6 2.6c.3.3.8.3 1.1.1l.5-.4c.3-.2.4-.6.3-.9l-.6-2.3 2.9-2.9 3.6 4.6c.3.4.9.5 1.3.2l.9-.8c.4-.3.6-.8.5-1.3z" transform="rotate(90 12 12)"/></svg>
+                <h3>Arrivals</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>Baggage belt and transfer guidance for a calm arrival.</p>
+            </div>
+          </button>
+
+          <button class="service-card" data-service="Baggage">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <h3>Baggage</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>Allowance, oversized baggage and tracing support.</p>
+            </div>
+          </button>
+
+          <button class="service-card" data-service="Lounges">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                <h3>Lounges</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>Terminal 3 lounge access, hours and quiet spaces.</p>
+            </div>
+          </button>
+
+          <button class="service-card" data-service="Immigration">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-3"/><rect x="9" y="9" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="9" y="17" width="1" height="1"/></svg>
+                <h3>Immigration</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>A concise guide to passport control and e-gates.</p>
+            </div>
+          </button>
+
+          <button class="service-card" data-service="Transportation">
+            <div class="service-content">
+              <div class="service-header">
+                <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="7.5" cy="16.5" r="1.5"/><circle cx="16.5" cy="16.5" r="1.5"/></svg>
+                <h3>Transportation</h3>
+                <span class="arrow">›</span>
+              </div>
+              <p>Taxis, rail links and car pickup from Terminal 3.</p>
+            </div>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+  <div class="contact-grid">
+    
+    <!-- الجانب الأيسر: المعلومات والتفاصيل -->
+    <div class="contact-copy">
+      <div class="eyebrow">SUPPORT & CONTACT</div>
+      <h2>Here when you <span>need us.</span></h2>
+      <p class="contact-desc idiqlat-regular">
+    Questions about booking, baggage, or terminal directions? Reach out to our 24/7 Cairo team.
+  </p>
+      
+      <div class="contact-cards">
+        <div class="contact-card-item">
+          <div class="card-icon">✉</div>
+          <div>
+            <small>EMAIL US</small>
+            <strong>support@skylineair.com</strong>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="card-icon">📞</div>
+          <div>
+            <small>PHONE (24/7 CAIRO DESK)</small>
+            <strong>+20 2 19000</strong>
+          </div>
+        </div>
+
+        <div class="contact-card-item">
+          <div class="card-icon">📍</div>
+          <div>
+            <small>LOCATION</small>
+            <strong>Terminal 3, Cairo International Airport</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- الجانب الأيمن: نموذج التواصل -->
+    <form id="contactForm" class="contact-form">
+      <h3>Send a Message</h3>
+      <div class="two-inputs">
+        <div class="input-field">
+          <label>YOUR NAME</label>
+          <input type="text" placeholder="John Doe" required />
+        </div>
+        <div class="input-field">
+          <label>YOUR EMAIL</label>
+          <input type="email" placeholder="john@example.com" required />
+        </div>
+      </div>
+      <div class="input-field">
+        <label>HOW CAN WE HELP?</label>
+        <textarea rows="4" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary submit-btn">Send Message <span>→</span></button>
+    </form>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-icon">✈</span>
+      <b>SKYLINE <em>AIR</em></b>
+      <small>© 2026 Skyline Air. All rights reserved.</small>
+    </div>
+    <div class="developer-credit">
+       with precision by: <br> <spain> ENGINEER ABDELRHMAN</spain>
+    </div>
+  </footer>
+
+  <!-- SEAT MODAL -->
+  <div id="seatModal" class="modal hidden">
+    <div class="modal-card">
+      <button id="closeModal" class="close">&times;</button>
+      <h3>Select Your Seat</h3>
+      <p id="modalDetails">SKY204 · CAI → BER</p>
+      
+      <div class="cockpit">FRONT OF AIRCRAFT</div>
+      <div id="seatGrid" class="seat-grid"></div>
+
+      <div class="modal-actions">
+        <button id="cancelSeat" class="btn btn-secondary">Cancel</button>
+        <button id="confirmSeat" class="btn btn-primary">Confirm Seat</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE MODAL -->
+  <div id="serviceModal" class="modal hidden">
+    <div class="modal-card service-modal-card">
+      <button id="closeService" class="close">&times;</button>
+      <h3 id="serviceTitle">Service Details</h3>
+      <p id="serviceBody">Information about this service...</p>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="backToTop" class="back-to-top" title="Back to top">↑</button>
+
+  <!-- BOTTOM NAVIGATION BAR FOR MOBILE & TABLET -->
+<nav class="bottom-nav">
+  <a href="#home" class="bottom-nav-item active">
+    <i class="fa-solid fa-house"></i>
+    <span>Home</span>
+  </a>
+  <a href="#flights" class="bottom-nav-item">
+    <i class="fa-solid fa-plane-departure"></i>
+    <span>Flights</span>
+  </a>
+  <a href="#destinations" class="bottom-nav-item">
+    <i class="fa-solid fa-layer-group"></i>
+    <span>Destinations</span>
+  </a>
+  <a href="#fleet" class="bottom-nav-item">
+    <i class="fa-solid fa-plane"></i>
+    <span>Fleet</span>
+  </a>
+  <a href="#contact" class="bottom-nav-item">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Contact</span>
+  </a>
+</nav>
+
+  <script src="index.js"></script>
+</body>
+</html>

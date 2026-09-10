@@ -1,0 +1,1320 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-family: "Idiqlat", serif;
+  font-weight: 400;
+}
+
+:root {
+  --bg: #061424;
+  --bg2: #071a2c;
+  --card: #102a43;
+  --border: #244663;
+  --cyan: #43c4ff;
+  --cyan2: #9be5ff;
+  --text: #f5f9fd;
+  --muted: #9db2c5;
+  --gold: #f4bc4b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Common Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--cyan);
+  color: #03131e;
+}
+
+.btn-primary:hover {
+  background: var(--cyan2);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(16, 42, 67, 0.8);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+.navbar {
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 18, 31, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(120, 170, 205, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6.5%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+.brand b,
+.eyebrow,
+h2 span,
+h1 span {
+  color: var(--cyan);
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  border: 1px solid #168fc8;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  color: #a9bac9;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.support-btn {
+  border: 1px solid var(--border);
+  padding: 11px 20px;
+  border-radius: 11px;
+  background: rgba(13, 36, 57, 0.5);
+}
+
+/* ==========================================================================
+   3. HERO SECTION STYLING
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  background: #080e18 url('https://images.unsplash.com/photo-1506015391300-4802dc74de2e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 14, 24, 0.75) 0%, rgba(8, 14, 24, 0.95) 100%);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 15px 0 20px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px; /* المسافة بين العناصر */
+  color: #ffffff; /* لون النص الأبيض */
+  font-size: 16px;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* المسافة بين الأيقونة والنص */
+}
+
+.stat-icon {
+  font-size: 18px;
+}
+
+/* ألوان الأيقونات مثل الصورة */
+.icon-blue {
+  color: #38ef7d; /* أو استخدم #00b4d8 / #38bdf8 للون الأزرق السماوي */
+  color: #38bdf8;
+}
+
+.icon-orange {
+  color: #fbbf24; /* اللون البرتقالي/الأصفر للعداد */
+}
+
+/* ==========================================================================
+   4. COMMON SECTION LAYOUTS & HEADINGS
+   ========================================================================== */
+.section,
+.status-section {
+  padding: 82px 6.5%;
+  border-bottom: 1px solid rgba(120, 170, 205, 0.12);
+}
+
+.section-grid,
+.contact-grid,
+.hub-inner {
+  width: min(1320px, 100%);
+  margin: auto;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 70px;
+  align-items: center;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1.05;
+  letter-spacing: -2.6px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.section-heading h2 span {
+  color: var(--cyan2);
+}
+
+.section-heading p {
+  color: var(--muted);
+  max-width: 510px;
+  font-size: 15px;
+}
+
+/* ==========================================================================
+   5. FLIGHT STATUS SECTION
+   ========================================================================== */
+.status-section {
+  background: #071827;
+}
+
+.status-section h2 {
+  margin: 13px 0;
+}
+
+.status-section p {
+  color: var(--muted);
+  max-width: 510px;
+  font-size: 15px;
+}
+
+.mini-points {
+  display: flex;
+  gap: 25px;
+  color: #9fb0be;
+  font-size: 12px;
+  margin-top: 18px;
+}
+
+.status-card {
+  background: #0e2942;
+  border: 1px solid var(--border);
+  padding: 25px;
+  border-radius: 16px;
+}
+
+.label {
+  font: 600 11px monospace;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  margin-bottom: 14px;
+}
+
+.status-form {
+  display: flex;
+  gap: 10px;
+}
+
+.status-form input {
+  flex: 1;
+}
+
+.status-result {
+  color: var(--cyan2);
+  font-size: 13px;
+  margin-top: 12px;
+  min-height: 18px;
+}
+
+/* FORMS & INPUTS */
+input,
+textarea {
+  background: #061827;
+  border: 1px solid #24435d;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  padding: 14px 15px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--cyan);
+}
+
+/* ==========================================================================
+   6. FLIGHT LIST SECTION
+   ========================================================================== */
+.flights-section {
+  padding-top: 75px;
+}
+
+.flight-list {
+  display: grid;
+  gap: 13px;
+}
+
+.flight-item {
+  background: #0e2942;
+  border: 1px solid #244663;
+  border-radius: 15px;
+  padding: 21px 22px;
+  display: grid;
+  grid-template-columns: 1.15fr 1.2fr 0.9fr auto 150px;
+  align-items: center;
+  gap: 28px;
+  transition: 0.25s;
+}
+
+.flight-item:hover,
+.flight-item.selected {
+  border-color: #299fd2;
+}
+
+.flight-company {
+  font-weight: 700;
+}
+
+.flight-code {
+  color: #9eb1c1;
+  font: 600 12px monospace;
+  margin-top: 5px;
+}
+
+.badge {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 10px;
+  border: 1px solid #84672b;
+  border-radius: 5px;
+  padding: 3px 6px;
+  margin-top: 7px;
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.flight-time strong {
+  font-size: 22px;
+}
+
+.flight-time small {
+  display: block;
+  color: #8da3b4;
+  font-size: 11px;
+}
+
+.route-line {
+  width: 90px;
+  text-align: center;
+  color: #93a8b8;
+  font-size: 10px;
+}
+
+.route-line i {
+  display: block;
+  height: 1px;
+  background: #5e7b91;
+  position: relative;
+  margin: 4px 0;
+}
+
+.route-line i:after {
+  content: '▸';
+  position: absolute;
+  right: -1px;
+  top: -7px;
+  color: var(--cyan);
+}
+
+.aircraft {
+  color: #9fb2c2;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.price {
+  text-align: right;
+}
+
+.price strong {
+  font-size: 20px;
+  color: var(--cyan2);
+}
+
+.price small {
+  display: block;
+  color: #8ea4b5;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.flight-item .select-btn {
+  white-space: nowrap;
+  justify-self: end;
+  width: 150px;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   7. DESTINATIONS SECTION
+   ========================================================================== */
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.destination-card {
+  height: 445px;
+  position: relative;
+  border: 1px solid #274863;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0c263e;
+  transition: 0.25s;
+}
+
+.destination-card:hover,
+.destination-card.active {
+  border-color: #32b5ef;
+  transform: translateY(-2px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85);
+}
+
+.destination-card:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(3, 14, 25, 0.2) 45%, rgba(3, 14, 25, 0.96) 100%);
+}
+
+.destination-info {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 21px;
+  width: 100%;
+}
+
+.destination-info small {
+  font: 600 10px monospace;
+  letter-spacing: 1.7px;
+  color: #b9c8d2;
+}
+
+.destination-info h3 {
+  font-size: 25px;
+  margin: 6px 0 2px;
+}
+
+.destination-info p {
+  font-size: 11px;
+  color: #b1c0cc;
+}
+
+.destination-info strong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gold);
+  font-size: 12px;
+  margin-top: 22px;
+  border-top: 1px solid rgba(190, 210, 225, 0.18);
+  padding-top: 12px;
+}
+
+.destination-info strong span {
+  color: var(--cyan2);
+  font-size: 22px;
+}
+
+/* ==========================================================================
+   8. FLEET SECTION
+   ========================================================================== */
+.fleet-section {
+  background: #061827;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.fleet-card {
+  background: #0e2942;
+  border: 1px solid #254660;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 18px;
+}
+
+.fleet-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fleet-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fleet-image span {
+  position: absolute;
+  z-index: 2;
+  top: 13px;
+  left: 13px;
+  background: #1b3145;
+  border: 1px solid #6b7680;
+  border-radius: 6px;
+  padding: 5px 8px;
+  font: 600 10px monospace;
+  color: #efc05a;
+}
+
+.fleet-card h3,
+.fleet-card p,
+.fleet-meta {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fleet-card h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.fleet-card p {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+  min-height: 48px;
+}
+
+.fleet-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid #25445e;
+  margin-top: 17px;
+  padding-top: 16px;
+  gap: 10px;
+}
+
+.fleet-meta b {
+  font-size: 15px;
+  color: var(--cyan2);
+}
+
+.fleet-meta small {
+  display: block;
+  color: #778d9d;
+  font-size: 9px;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+/* حركة وسلاسة التغيير للكارت والصورة */
+.fleet-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fleet-image img {
+  transition: transform 0.4s ease;
+}
+
+/* تأثير التفاعل عند مرور الماوس على الكارت (Hover) */
+.fleet-card:hover {
+  transform: translateY(-8px); /* يرتفع الكارت لفوق 8 بكسل */
+  border-color: var(--cyan); /* يتغير لون الحدود للون السماوي المضيء */
+  box-shadow: 0 12px 30px rgba(67, 196, 255, 0.15); /* إضاءة ظل خفيفة تحت الكارت */
+}
+
+/* زوم بسيط للصورة عند الـ Hover */
+.fleet-card:hover .fleet-image img {
+  transform: scale(1.05); /* تكبير الصورة بنسبة 5% */
+}
+
+/* ==========================================================================
+   9. CAIRO HUB SECTION
+   ========================================================================== */
+.hub-section {
+  padding: 80px 5%;
+  background-color: #0b1320;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(120, 170, 205, 0.12);
+}
+
+.hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hub-eyebrow {
+  color: #3b82f6;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hub-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hub-terminal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #3b82f6;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.hub-terminal .dash {
+  color: #475569;
+}
+
+.hub-terminal .dot {
+  font-size: 1.2rem;
+  line-height: 0;
+}
+
+.hub-desc {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  max-width: 450px;
+}
+
+.hub-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.fact-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #3b82f6;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: inherit;
+  width: 100%;
+}
+
+.service-card:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.service-icon {
+  width: 20px;
+  height: 20px;
+  stroke: #60a5fa;
+  flex-shrink: 0;
+}
+
+.service-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.service-header .arrow {
+  color: #64748b;
+  font-size: 1.2rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.service-card:hover .arrow {
+  color: #60a5fa;
+  transform: translateX(3px);
+}
+
+.service-card p {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==========================================================================
+   10. CONTACT SECTION
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.contact-copy h2 {
+  margin: 18px 0;
+}
+
+.contact-copy h2 span {
+  color: var(--cyan2);
+}
+
+.contact-copy p {
+  color: #b1c0cc;
+  font-size: 14px;
+}
+
+.contact-details {
+  margin-top: 30px;
+  color: #b9c6d0;
+  display: grid;
+  gap: 14px;
+  font-size: 14px;
+}
+
+.contact-form {
+  background: #0d2942;
+  border: 1px solid #254761;
+  border-radius: 16px;
+  padding: 26px;
+}
+
+.two-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  margin-top: 14px;
+  resize: vertical;
+}
+
+.contact-form .btn {
+  margin-top: 14px;
+}
+/* CONTACT SECTION */
+.contact-section {
+  padding: 80px 5%;
+  background: var(--bg2);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contact-desc {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0 30px;
+}
+/* قواعد خط Idiqlat */
+.idiqlat-extralight {
+  font-family: "Idiqlat", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.idiqlat-light {
+  font-family: "Idiqlat", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.idiqlat-regular {
+  font-family: "Idiqlat", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* CONTACT CARDS */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.contact-card-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--cyan);
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(67, 196, 255, 0.1);
+  color: var(--cyan);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.contact-card-item small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.contact-card-item strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* FORM STYLING */
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.two-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field label {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--cyan);
+}
+
+.submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .two-inputs { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+footer {
+  padding: 38px 6.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  color: #8fa4b4;
+  font-size: 11px;
+  border-top: 1px solid rgba(120, 170, 205, 0.12);
+}
+
+.footer-brand {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px 11px;
+  align-items: center;
+}
+
+.footer-brand .brand-icon {
+  width: 40px;
+  height: 40px;
+  grid-row: span 2;
+}
+
+.footer-brand b {
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.footer-brand em {
+  font-style: normal;
+  color: var(--cyan);
+}
+
+.footer-brand small {
+  grid-column: 2;
+}
+
+.developer-credit {
+  color: var(--muted, #8a99a8);
+  font-size: 13px;
+}
+
+.developer-credit span {
+  color: var(--cyan, #43c4ff);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   12. MODAL & SEAT SELECTION
+   ========================================================================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 200;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.modal-card {
+  width: min(700px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: #0d2942;
+  border: 1px solid #2b4d67;
+  border-radius: 18px;
+  padding: 28px;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.close {
+  position: absolute;
+  right: 18px;
+  top: 15px;
+  background: none;
+  border: 0;
+  color: #a9bbc9;
+  font-size: 30px;
+}
+
+.modal-card h3 {
+  font-size: 32px;
+  margin: 8px 0 3px;
+}
+
+.modal-card > p {
+  color: #a2b6c6;
+  font-size: 12px;
+}
+
+.cockpit {
+  text-align: center;
+  color: #728b9e;
+  font: 11px monospace;
+  letter-spacing: 1.5px;
+  margin: 20px 0 10px;
+}
+
+.seat-grid {
+  width: 350px;
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+  background: #092039;
+  border: 1px solid #24435d;
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.seat {
+  background: #194362;
+  border: 1px solid #2d607f;
+  color: #d9e8f1;
+  border-radius: 6px;
+  padding: 12px 5px;
+}
+
+.seat:hover,
+.seat.active {
+  background: var(--cyan);
+  color: #041522;
+  border-color: var(--cyan);
+}
+
+.seat.unavailable {
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #294861;
+  margin-top: 24px;
+  padding-top: 18px;
+}
+
+.service-modal-card {
+  max-width: 520px;
+}
+
+.service-modal-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 15px;
+  color: #b7c5d0;
+}
+
+/* ==========================================================================
+   13. BACK TO TOP BUTTON
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--cyan, #43c4ff);
+  color: #03131e;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(67, 196, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #73d5ff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(67, 196, 255, 0.5);
+}
+
+/* ==========================================================================
+   14. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1050px) {
+  .nav-links { gap: 16px; }
+  .destination-grid { grid-template-columns: repeat(3, 1fr); }
+  .destination-card { height: 420px; }
+  .fleet-grid { grid-template-columns: repeat(2, 1fr); }
+  .flight-item { grid-template-columns: 1fr 1fr; }
+  .flight-item .select-btn { width: 100%; justify-self: stretch; }
+  .price { text-align: left; }
+  .section-grid, .hub-container, .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .navbar { height: 72px; padding: 0 5%; }
+  .nav-links { display: none; }
+  .support-btn { padding: 9px 13px; }
+  .hero { min-height: 550px; }
+  .hero h1 { font-size: 42px; letter-spacing: -1px; }
+  .hero p { font-size: 15px; }
+  .hero-stats { flex-direction: column; gap: 9px; }
+  .section, .status-section { padding: 62px 5%; }
+  .section-heading { display: block; }
+  .section-heading p { margin-top: 15px; }
+  .destination-grid, .fleet-grid, .hub-grid { grid-template-columns: 1fr; }
+  .destination-card { height: 430px; }
+  .flight-item { grid-template-columns: 1fr; gap: 14px; }
+  .flight-item .select-btn { width: 100%; justify-self: stretch; }
+  .flight-route { justify-content: flex-start; }
+  .price { text-align: left; }
+  .two-inputs { grid-template-columns: 1fr; }
+  footer { flex-direction: column; align-items: flex-start; }
+  .seat-grid { width: 300px; }
+}
+
+
+
+/* ==========================================================================
+   BOTTOM NAVIGATION BAR (MOBILE & TABLET)
+   ========================================================================== */
+.bottom-nav {
+  display: none; /* مخفي على الشاشات الكبيرة */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: rgba(5, 18, 31, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(120, 170, 205, 0.15);
+  z-index: 1000;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.bottom-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #7d93a4;
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  width: 20%;
+  height: 100%;
+}
+
+.bottom-nav-item i {
+  font-size: 18px;
+  transition: all 0.25s ease;
+}
+
+/* العنصر النشط (المحدد) بنفس تأثير الضوء مثل الصورة */
+.bottom-nav-item.active {
+  color: var(--cyan, #43c4ff);
+}
+
+.bottom-nav-item.active i {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 0 8px rgba(67, 196, 255, 0.6));
+}
+
+.bottom-nav-item:hover {
+  color: #ffffff;
+}
+
+/* إظهار الشريط وإخفاء الهيدر العلوي في الهواتف والتابلت */
+@media (max-width: 850px) {
+  .bottom-nav {
+    display: flex;
+  }
+  
+  /* إضافة مسافة سفليّة للصفحة لكي لا يغطي الشريط آخر محتوى */
+  body {
+    padding-bottom: 65px;
+  }
+
+  /* رفع زر العودة للأعلى ليصبح فوق الشريط السفلي */
+  .back-to-top {
+    bottom: 80px;
+  }
+}
