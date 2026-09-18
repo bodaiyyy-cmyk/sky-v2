@@ -1318,3 +1318,15 @@ footer {
     bottom: 80px;
   }
 }
+/* منع الزوم التلقائي في الهواتف عند الضغط على المدخلات */
+@media (max-width: 720px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
